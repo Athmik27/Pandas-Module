@@ -1,0 +1,92 @@
+[
+  {
+    "id": 11,
+    "name": "Metapod",
+    "type1": "Bug",
+    "type2": null,
+    "height": 0.7,
+    "weight": 9.9,
+    "legendary": 0
+  },
+  {
+    "id": 12,
+    "name": "Butterfree",
+    "type1": "Bug",
+    "type2": "Flying",
+    "height": 1.1,
+    "weight": 32,
+    "legendary": 0
+  },
+  {
+    "id": 13,
+    "name": "Weedle",
+    "type1": "Bug",
+    "type2": "Poison",
+    "height": 0.3,
+    "weight": 3.2,
+    "legendary": 0
+  },
+  {
+    "id": 14,
+    "name": "Kakuna",
+    "type1": "Bug",
+    "type2": "Poison",
+    "height": 0.6,
+    "weight": 10,
+    "legendary": 0
+  },
+  {
+    "id": 15,
+    "name": "Beedrill",
+    "type1": "Bug",
+    "type2": "Poison",
+    "height": 1,
+    "weight": 29.5,
+    "legendary": 0
+  },
+  {
+    "id": 16,
+    "name": "Pidgey",
+    "type1": "Normal",
+    "type2": "Flying",
+    "height": 0.3,
+    "weight": 1.8,
+    "legendary": 0
+  },
+  {
+    "id": 17,
+    "name": "Pidgeotto",
+    "type1": "Normal",
+    "type2": "Flying",
+    "height": 1.1,
+    "weight": 30,
+    "legendary": 0
+  },
+  {
+    "id": 18,
+    "name": "Pidgeot",
+    "type1": "Normal",
+    "type2": "Flying",
+    "height": 1.5,
+    "weight": 39.5,
+    "legendary": 0
+  },
+  {
+    "id": 19,
+    "name": "Rattata",
+    "type1": "Normal",
+    "type2": null,
+    "height": 0.3,
+    "weight": 3.5,
+    "legendary": 0
+  },
+  {
+    "id": 20,
+    "name": "Raticate",
+    "type1": "Normal",
+    "type2": null,
+    "height": 0.7,
+    "weight": 18.5,
+    "legendary": 0
+  }
+]
