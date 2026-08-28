@@ -1,5 +1,5 @@
 # DATA FRAMES are the tabular data structure with rows and column.
-
+# df is simply a common variable name used for a Pandas DataFrame.
 import pandas as pd
 
 data={
