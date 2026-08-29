@@ -16,7 +16,6 @@ import pandas as pd
 df=pd.read_csv('sample.csv',index_col="Name") # usually pandas create an default index value with 0,1,2,3....
                                               # but index_col="name" is telling to create 'Name' as an Index
 print(df)
-
 # here we find an  data in thr table
 import pandas as pd
 df=pd.read_csv('sample.csv',index_col="Name") # usually pandas create an default index value with 0,1,2,3....
