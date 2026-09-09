@@ -12,6 +12,8 @@ print(heavy_pokemon)
 legendary_pokemon=df[df["Legendary"]==1] #instead of 1 we can also give True
 print(legendary_pokemon)
 
-water_pokemon=df[(df["Type1"]=="Water") | (df["Type1"]=="Water")]
+water_pokemon=df[(df["Type1"]=="Water") | (df["Type2"]=="Water")]
 print(water_pokemon)
 # here | is 'or' operator we can also use & "and" operation
+# Syntax:
+# df[df[(condition1) & (condition2)]]

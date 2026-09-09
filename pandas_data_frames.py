@@ -19,6 +19,8 @@ data={
 }
 df=pd.DataFrame(data,index=["employee_1","employee_2","employee_3"]) 
 print(df)
+# Now you are telling Pandas:
+# "Instead of 0, 1, 2, use these names as the row labels."( as an index)
 
 
 data={
@@ -37,7 +39,8 @@ data={
 }
 df=pd.DataFrame(data,index=["employee_1","employee_2","employee_3"]) 
 print(df.iloc[1]) # this gives me the data of an employee_2 by the help of index
-
+# iloc means integer-location.
+# It selects a row based on its numerical position, starting from 0.
 
 data={
 
