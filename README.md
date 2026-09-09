@@ -1919,3 +1919,124 @@ df.to_csv(
     "cleaned_data.csv",
     index=False
 )
+
+1. Read CSV
+import pandas as pd
+
+df = pd.read_csv("sample.csv")
+2. Select a column
+df["ColumnName"]
+Example:
+df["Weight"]
+3. Select multiple columns
+df[["Column1", "Column2"]]
+Example:
+df[["Name", "Weight"]]
+4. Filter rows — VERY IMPORTANT
+One condition
+df[df["ColumnName"] > value]
+Example:
+df[df["Weight"] > 50]
+Equal to
+df[df["Type1"] == "Fire"]
+Not equal
+df[df["Type1"] != "Fire"]
+Less than
+df[df["Height"] < 1]
+5. Multiple conditions
+AND → &
+df[(df["Column1"] > value) & (df["Column2"] > value)]
+Example:
+df[(df["Height"] > 1) & (df["Weight"] > 50)]
+OR → |
+df[(df["Type1"] == "Fire") | (df["Type1"] == "Water")]
+⚠️ Put each condition inside parentheses.
+6. loc — select using labels/conditions
+df.loc[condition, "ColumnName"]
+Example:
+df.loc[df["Weight"] > 50, "Name"]
+Multiple columns:
+df.loc[df["Weight"] > 50, ["Name", "Weight"]]
+7. iloc — select using positions
+df.iloc[row_position, column_position]
+Examples:
+df.iloc[0]
+df.iloc[0:5]
+df.iloc[0:5, 0:3]
+8. Sort data
+Ascending
+df.sort_values("ColumnName")
+Descending
+df.sort_values("ColumnName", ascending=False)
+Example:
+df.sort_values("Weight", ascending=False)
+9. Find unique values
+df["ColumnName"].unique()
+Number of unique values:
+df["ColumnName"].nunique()
+10. Missing values
+Check:
+df.isna()
+Count missing values:
+df.isna().sum()
+Remove missing rows:
+df.dropna()
+Fill missing values:
+df["ColumnName"].fillna(value)
+Example:
+df["Type2"] = df["Type2"].fillna("None")
+11. Remove duplicates
+df.drop_duplicates()
+12. Add a new column
+df["NewColumn"] = value
+Example:
+df["DoubleWeight"] = df["Weight"] * 2
+13. Delete a column
+df.drop("ColumnName", axis=1)
+Or permanently:
+df.drop("ColumnName", axis=1, inplace=True)
+14. Rename columns
+df.rename(columns={"OldName": "NewName"}, inplace=True)
+15. groupby() — VERY IMPORTANT
+General syntax:
+df.groupby("ColumnName")["ValueColumn"].function()
+Example:
+df.groupby("Type1")["Weight"].mean()
+Other functions:
+.sum()
+.mean()
+.max()
+.min()
+.count()
+16. value_counts() — VERY COMMON
+df["ColumnName"].value_counts()
+Example:
+df["Type1"].value_counts()
+This tells you how many times each value occurs.
+17. Aggregation
+df.groupby("ColumnName")["ValueColumn"].agg(["mean", "max", "min"])
+Example:
+df.groupby("Type1")["Weight"].agg(["mean", "max", "min"])
+
+⭐ Most Important Interview Pattern
+When you see a question like:
+"Find all Pokémon whose height is greater than 1 and weight is greater than 50."
+Think:
+df[(df["Height"] > 1) & (df["Weight"] > 50)]
+When you see:
+"Find average weight for each Type1."
+Think:
+df.groupby("Type1")["Weight"].mean()
+When you see:
+"Find the 5 heaviest Pokémon."
+Think:
+df.sort_values("Weight", ascending=False).head(5)
+When you see:
+"Find the number of Pokémon in each Type1."
+Think:
+df["Type1"].value_counts()
+These patterns are much more important for interviews than memorizing individual questions.
+df = pd.read_csv("sample.csv")
+
+pokemon_select=df[['Height'>1] and ['Weight'>50]]
+
