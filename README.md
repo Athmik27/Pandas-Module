@@ -1864,9 +1864,395 @@ df["Name"].str.contains()
 
 ---
 
-# 45. Typical Pandas Workflow
+# 🐼 Pandas Interview Coding Notes
 
-This is a very important pattern to remember.
+## 1. Read CSV
+
+```python
+import pandas as pd
+
+df = pd.read_csv("sample.csv")
+```
+
+---
+
+## 2. Inspect Data
+
+```python
+print(df.head())
+print(df.shape)
+print(df.info())
+print(df.describe())
+```
+
+---
+
+## 3. Check Missing Values
+
+```python
+print(df.isna().sum())
+```
+
+---
+
+## 4. Select a Column
+
+```python
+df["ColumnName"]
+```
+
+Example:
+
+```python
+df["Weight"]
+```
+
+---
+
+## 5. Select Multiple Columns
+
+```python
+df[["Column1", "Column2"]]
+```
+
+Example:
+
+```python
+df[["Name", "Weight"]]
+```
+
+---
+
+# 🔎 Filtering Data
+
+## 6. Filter Using One Condition
+
+### Greater than
+
+```python
+df[df["Weight"] > 50]
+```
+
+### Less than
+
+```python
+df[df["Height"] < 1]
+```
+
+### Equal to
+
+```python
+df[df["Type1"] == "Fire"]
+```
+
+### Not equal to
+
+```python
+df[df["Type1"] != "Fire"]
+```
+
+---
+
+## 7. Filter Using Multiple Conditions
+
+### AND — `&`
+
+```python
+df[(df["Height"] > 1) & (df["Weight"] > 50)]
+```
+
+### OR — `|`
+
+```python
+df[(df["Type1"] == "Fire") | (df["Type1"] == "Water")]
+```
+
+> ⚠️ Always put each condition inside parentheses when using `&` or `|`.
+
+### Common Mistake
+
+❌ Incorrect:
+
+```python
+df[['Height'] > 1 and ['Weight'] > 50]
+```
+
+✅ Correct:
+
+```python
+df[(df["Height"] > 1) & (df["Weight"] > 50)]
+```
+
+---
+
+# 📍 loc and iloc
+
+## 8. `loc[]`
+
+Used for selecting data using labels or conditions.
+
+```python
+df.loc[condition, "ColumnName"]
+```
+
+Example:
+
+```python
+df.loc[df["Weight"] > 50, "Name"]
+```
+
+Multiple columns:
+
+```python
+df.loc[df["Weight"] > 50, ["Name", "Weight"]]
+```
+
+---
+
+## 9. `iloc[]`
+
+Used for selecting data using integer positions.
+
+```python
+df.iloc[row_position, column_position]
+```
+
+Examples:
+
+```python
+df.iloc[0]
+```
+
+```python
+df.iloc[0:5]
+```
+
+```python
+df.iloc[0:5, 0:3]
+```
+
+---
+
+# 📊 Sorting
+
+## 10. Sort Data
+
+### Ascending
+
+```python
+df.sort_values("ColumnName")
+```
+
+### Descending
+
+```python
+df.sort_values("ColumnName", ascending=False)
+```
+
+Example:
+
+```python
+df.sort_values("Weight", ascending=False)
+```
+
+### Top 5 Heaviest Pokémon
+
+```python
+df.sort_values("Weight", ascending=False).head(5)
+```
+
+---
+
+# 🔢 Unique Values
+
+## 11. Find Unique Values
+
+```python
+df["ColumnName"].unique()
+```
+
+Example:
+
+```python
+df["Type1"].unique()
+```
+
+### Count Unique Values
+
+```python
+df["ColumnName"].nunique()
+```
+
+---
+
+# 🧹 Data Cleaning
+
+## 12. Remove Unnecessary Columns
+
+```python
+df = df.drop(columns=["No"])
+```
+
+---
+
+## 13. Handle Missing Values
+
+### Check Missing Values
+
+```python
+df.isna()
+```
+
+### Count Missing Values
+
+```python
+df.isna().sum()
+```
+
+### Remove Missing Rows
+
+```python
+df.dropna()
+```
+
+### Fill Missing Values
+
+```python
+df["ColumnName"] = df["ColumnName"].fillna(value)
+```
+
+Example:
+
+```python
+df["Type2"] = df["Type2"].fillna("None")
+```
+
+---
+
+## 14. Replace Inconsistent Values
+
+```python
+df["Type1"] = df["Type1"].replace({
+    "Grass": "GRASS"
+})
+```
+
+---
+
+## 15. Standardize Text
+
+Convert text to lowercase:
+
+```python
+df["Name"] = df["Name"].str.lower()
+```
+
+---
+
+## 16. Remove Duplicate Rows
+
+```python
+df = df.drop_duplicates()
+```
+
+---
+
+# ➕ Adding and Removing Columns
+
+## 17. Add a New Column
+
+```python
+df["NewColumn"] = value
+```
+
+Example:
+
+```python
+df["DoubleWeight"] = df["Weight"] * 2
+```
+
+---
+
+## 18. Delete a Column
+
+```python
+df.drop("ColumnName", axis=1)
+```
+
+Permanently:
+
+```python
+df.drop("ColumnName", axis=1, inplace=True)
+```
+
+---
+
+## 19. Rename Columns
+
+```python
+df.rename(
+    columns={"OldName": "NewName"},
+    inplace=True
+)
+```
+
+---
+
+# 📦 GroupBy
+
+## 20. General Syntax
+
+```python
+df.groupby("ColumnName")["ValueColumn"].function()
+```
+
+Example:
+
+```python
+df.groupby("Type1")["Weight"].mean()
+```
+
+Common functions:
+
+```python
+.sum()
+.mean()
+.max()
+.min()
+.count()
+```
+
+---
+
+## 21. Multiple Aggregations
+
+```python
+df.groupby("Type1")["Weight"].agg(
+    ["mean", "max", "min"]
+)
+```
+
+---
+
+# 🔢 value_counts()
+
+## 22. Count Occurrences
+
+```python
+df["ColumnName"].value_counts()
+```
+
+Example:
+
+```python
+df["Type1"].value_counts()
+```
+
+This returns the number of times each value occurs.
+
+---
+
+# 🧪 Complete Data Cleaning Example
 
 ```python
 import pandas as pd
@@ -1884,9 +2270,7 @@ print(df.describe())
 print(df.isna().sum())
 
 # 4. Remove unnecessary columns
-df = df.drop(
-    columns=["No"]
-)
+df = df.drop(columns=["No"])
 
 # 5. Handle missing values
 df["Type2"] = df["Type2"].fillna("None")
@@ -1919,3 +2303,104 @@ df.to_csv(
     "cleaned_data.csv",
     index=False
 )
+```
+
+---
+
+# ⭐ Important Interview Patterns
+
+### Find records matching a condition
+
+```python
+df[df["Column"] > value]
+```
+
+### Multiple conditions — AND
+
+```python
+df[(df["Column1"] > value) & (df["Column2"] > value)]
+```
+
+### Multiple conditions — OR
+
+```python
+df[(df["Column1"] == value1) | (df["Column1"] == value2)]
+```
+
+### Find average for each category
+
+```python
+df.groupby("Category")["Value"].mean()
+```
+
+### Find maximum for each category
+
+```python
+df.groupby("Category")["Value"].max()
+```
+
+### Count each category
+
+```python
+df["Category"].value_counts()
+```
+
+### Find top 5 values
+
+```python
+df.sort_values(
+    "Value",
+    ascending=False
+).head(5)
+```
+
+### Find bottom 5 values
+
+```python
+df.sort_values(
+    "Value",
+    ascending=True
+).head(5)
+```
+
+### Find missing values
+
+```python
+df.isna().sum()
+```
+
+### Remove duplicates
+
+```python
+df.drop_duplicates()
+```
+
+---
+
+# 🎯 Interview Strategy
+
+When solving Pandas coding questions, identify the operation first:
+
+| Question asks you to... | Use                                 |   |
+| ----------------------- | ----------------------------------- | - |
+| Select a column         | `df["Column"]`                      |   |
+| Filter rows             | `df[condition]`                     |   |
+| Use AND                 | `&`                                 |   |
+| Use OR                  | `                                   | ` |
+| Select by label         | `loc[]`                             |   |
+| Select by position      | `iloc[]`                            |   |
+| Sort                    | `sort_values()`                     |   |
+| Get unique values       | `unique()`                          |   |
+| Count unique values     | `nunique()`                         |   |
+| Count occurrences       | `value_counts()`                    |   |
+| Handle missing data     | `isna()`, `fillna()`, `dropna()`    |   |
+| Remove duplicates       | `drop_duplicates()`                 |   |
+| Group data              | `groupby()`                         |   |
+| Calculate statistics    | `mean()`, `sum()`, `max()`, `min()` |   |
+| Multiple statistics     | `agg()`                             |   |
+| Add column              | `df["New"] = ...`                   |   |
+| Delete column           | `drop()`                            |   |
+| Rename column           | `rename()`                          |   |
+| Save CSV                | `to_csv()`                          |   |
+
+**These patterns form the core of Pandas coding interview questions.**
