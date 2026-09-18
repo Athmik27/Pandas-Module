@@ -55,11 +55,75 @@ import pandas as pd
 # s = pd.Series([10, 20, 30], index=["A", "B", "C"])
 # print(s.index)
 
-import pandas as pd
-s = pd.Series([10, 20, 30], index=["A", "B", "C"])
-print(s.values) # s.index    # gives labels
+# import pandas as pd
+# s = pd.Series([10, 20, 30], index=["A", "B", "C"])
+# print(s.values) # s.index    # gives labels
 #                s.values   # gives values
 
 # Create a Pandas Series containing:
 # 10, 20, 30, 40, 50
 # Then print the Series.
+# s=pd.Series([10,20,30,40,50])
+# print(s)
+
+# Create a Pandas Series with these values:
+
+# 100, 200, 300
+
+# and use these custom indexes:
+
+# "A", "B", "C"
+
+# Then print the Series
+# s=pd.Series([100,200,300],index=["A","B","C"])
+# print(s)
+
+# Create this Series:
+
+# A    100
+# B    200
+# C    300
+
+# Then print only the value 200 using its index label.
+# s=pd.Series([100,200,300],index=["A","B","C"])
+# print(s.loc["B"])
+
+# Given:
+
+# s = pd.Series([100, 200, 300], index=["A", "B", "C"])
+
+# # Write code to print 300 using iloc.
+# s=pd.Series([100,200,300],index=["A","B","C"])
+# print(s.iloc[2])
+
+# Create this Series:
+
+# A    10
+# B    20
+# C    30
+# D    40
+
+# Then write code to print only 20 and 30 using iloc.
+# s=pd.Series([10,20,30,40],index=["A","B","C","D"])
+# print(s.iloc[1:3])
+
+# Create this Series:
+
+# A    10
+# B    20
+# C    30
+# D    40
+
+# Then write code to change the value at index "B" from 20 to 50.
+
+# Use .loc[].
+# s=pd.Series([10,20,30,40],index=["A","B","C","D"])
+# s.loc["B"]=50
+# print(s)
+
+# s = pd.Series([10, 20, 30, 40], index=["A", "B", "C", "D"])
+
+# Change the value at position 2 to 100 using .iloc.
+s = pd.Series([10, 20, 30, 40], index=["A", "B", "C", "D"])
+s.iloc[2]=100
+print(s)
