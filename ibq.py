@@ -6,16 +6,16 @@ heavy_pokemon=df[df[('Weight')]>50]
 print(heavy_pokemon)
 
 # Display Pokémon whose Height is greater than 1 AND Weight is greater than 50
-# df = pd.read_csv("sample.csv")
-# pokemon_select = df[(df["Height"] > 1) & (df["Weight"] > 50)]
-# print(pokemon_select)
+df = pd.read_csv("sample.csv")
+pokemon_select = df[(df["Height"] > 1) & (df["Weight"] > 50)]
+print(pokemon_select)
 
 # Syntax: df[(df["Column1"] > value) & (df["Column2"] > value)]
 
 # Display all Pokémon whose Type1 is either "Fire" OR "Water".
-# df = pd.read_csv("sample.csv")
-# pokemon_select = df[(df["Type1"] == 'Fire') | (df["Type1"] == 'Water')]
-# print(pokemon_select)
+df = pd.read_csv("sample.csv")
+pokemon_select = df[(df["Type1"] == 'Fire') | (df["Type1"] == 'Water')]
+print(pokemon_select)
 
 #  Display the 5 heaviest Pokémon, with the heaviest one appearing first very imp
 # df = pd.read_csv("sample.csv")
