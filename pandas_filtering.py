@@ -16,4 +16,4 @@ water_pokemon=df[(df["Type1"]=="Water") | (df["Type2"]=="Water")]
 print(water_pokemon)
 # here | is 'or' operator we can also use & "and" operation
 # Syntax:
-# df[df[(condition1) & df(condition2)]]
+# df[(df[condition1]) & (df[condition2])]
