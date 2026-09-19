@@ -1,14 +1,14 @@
 # Write Pandas code to display only the Pokémon whose Weight is greater than 0.5
 import pandas as pd
 
-# df = pd.read_csv("sample.csv")
-# heavy_pokemon=df[df[('Weight')]>50]
-# print(heavy_pokemon)
+df = pd.read_csv("sample.csv")
+heavy_pokemon=df[df[('Weight')]>50]
+print(heavy_pokemon)
 
 # # Display Pokémon whose Height is greater than 1 AND Weight is greater than 50
-# df = pd.read_csv("sample.csv")
-# pokemon_select = df[(df["Height"] > 1) & (df["Weight"] > 50)]
-# print(pokemon_select)
+df = pd.read_csv("sample.csv")
+pokemon_select = df[(df["Height"] > 1) & (df["Weight"] > 50)]
+print(pokemon_select)
 
 # # Syntax: df[(df["Column1"] > value) & (df["Column2"] > value)]
 
