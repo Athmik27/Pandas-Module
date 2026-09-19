@@ -124,6 +124,70 @@ import pandas as pd
 # s = pd.Series([10, 20, 30, 40], index=["A", "B", "C", "D"])
 
 # Change the value at position 2 to 100 using .iloc.
-s = pd.Series([10, 20, 30, 40], index=["A", "B", "C", "D"])
-s.iloc[2]=100
-print(s)
+# s = pd.Series([10, 20, 30, 40], index=["A", "B", "C", "D"])
+# s.iloc[2]=100
+# print(s)
+
+# Given:
+
+# s = pd.Series([10, 25, 30, 15, 40])
+
+# Write code to print only values greater than 20.
+# s = pd.Series([10, 25, 30, 15, 40])
+# print(s[s > 20])
+
+# Given:
+
+# s = pd.Series([10, 25, 30, 15, 40])
+
+# Write code to print only values less than 30.
+# s = pd.Series([10, 25, 30, 15, 40])
+# print(s[s<30])
+
+# Given:
+
+# s = pd.Series([10, 20, 30, 40, 50])
+
+# Print values that are greater than 20 AND less than 50.
+# s = pd.Series([10, 25, 30, 15, 40])
+# print(s[(s>20) & (s<50)])
+
+# Using:
+
+# s = pd.Series([10, 25, 30, 15, 40])
+
+# Print values that are less than 15 OR greater than 35
+# s = pd.Series([10, 25, 30, 15, 40])
+# print(s[(s<15)| (s>35)])
+
+# Given:
+
+# s = pd.Series([10, 20, 30, 40, 50])
+
+# Write code to find the total of all values.
+s = pd.Series([10, 20, 30, 40, 50])
+print(s.sum()) # we can use mean,max,min,...To sort from large → small, we use s.sort_values(ascending=False)
+
+# imp
+s = pd.Series([10, 20, 10, 30, 20, 10])
+print(s.value_counts())
+
+import pandas as pd
+s = pd.Series([10, 20, None, 40])
+print(s.isna()) # checks the Not Avail(NaN) values 
+
+s = pd.Series([10, None, 30, None, 50])
+print(s.fillna(0)) # fillna() is used to replace missing (NaN) values with another value.
+
+s = pd.Series([10, None, 30, None, 50])
+print(s.dropna()) # dropna() is used to remove missing (NaN) values from a Series.
+
+s = pd.Series([10, 20, None, 40, None])
+print(s.count()) # count() tells you the number of non-missing values in a Series.
+
+s = pd.Series([10, 20, 10, 30, 20, 40])
+print(s.unique()) 
+
+s = pd.Series([10, 20, 10, 30, 20, 40])
+print(s.nunique())
+
