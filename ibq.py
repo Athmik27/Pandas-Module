@@ -1,21 +1,21 @@
 # Write Pandas code to display only the Pokémon whose Weight is greater than 0.5
 import pandas as pd
 
-# df = pd.read_csv("sample.csv")
-# heavy_pokemon=df[df[('Weight')]>50]
-# print(heavy_pokemon)
+df = pd.read_csv("sample.csv")
+heavy_pokemon=df[df[('Weight')]>50]
+print(heavy_pokemon)
 
 # Display Pokémon whose Height is greater than 1 AND Weight is greater than 50
-# df = pd.read_csv("sample.csv")
-# pokemon_select = df[(df["Height"] > 1) & (df["Weight"] > 50)]
-# print(pokemon_select)
+df = pd.read_csv("sample.csv")
+pokemon_select = df[(df["Height"] > 1) & (df["Weight"] > 50)]
+print(pokemon_select)
 
 # Syntax: df[(df["Column1"] > value) & (df["Column2"] > value)]
 
 # Display all Pokémon whose Type1 is either "Fire" OR "Water".
-# df = pd.read_csv("sample.csv")
-# pokemon_select = df[(df["Type1"] == 'Fire') | (df["Type1"] == 'Water')]
-# print(pokemon_select)
+df = pd.read_csv("sample.csv")
+pokemon_select = df[(df["Type1"] == 'Fire') | (df["Type1"] == 'Water')]
+print(pokemon_select)
 
 #  Display the 5 heaviest Pokémon, with the heaviest one appearing first very imp
 # df = pd.read_csv("sample.csv")
@@ -124,6 +124,7 @@ import pandas as pd
 # s = pd.Series([10, 20, 30, 40], index=["A", "B", "C", "D"])
 
 # Change the value at position 2 to 100 using .iloc.
+
 # s = pd.Series([10, 20, 30, 40], index=["A", "B", "C", "D"])
 # s.iloc[2]=100
 # print(s)
@@ -190,4 +191,9 @@ print(s.unique())
 
 s = pd.Series([10, 20, 10, 30, 20, 40])
 print(s.nunique())
+
+
+s = pd.Series([10, 20, 30, 40], index=["A", "B", "C", "D"])
+s.iloc[2]=100
+print(s)
 
