@@ -327,39 +327,39 @@ print(s)
 # print(df)
 
 # write code to sort the students by Marks from highest to lowest
-# data={
-#     "name":['raju','manglu','bheem','kumar','yasir','abdul'],
-#     "marks":[75,60,70,100,85,55],
-# }
-# df=pd.DataFrame(data)
-# print(df.sort_values('marks')) # ascending=False means descending order (highest → lowest).
+data={
+    "name":['raju','manglu','bheem','kumar','yasir','abdul'],
+    "marks":[75,60,70,100,85,55],
+}
+df=pd.DataFrame(data)
+print(df.sort_values('marks')) # ascending=False means descending order (highest → lowest).
 
 # Find the average marks of each department.
-# data = {
-#     "name": ["raju", "manglu", "bheem", "kumar", "yasir", "abdul"],
-#     "department": ["CSE", "ECE", "CSE", "ECE", "CSE", "ECE"],
-#     "marks": [75, 60, 70, 100, 85, 55]
-# }
-# df = pd.DataFrame(data)
-# print(df.groupby("department")["marks"].mean())
+data = {
+    "name": ["raju", "manglu", "bheem", "kumar", "yasir", "abdul"],
+    "department": ["CSE", "ECE", "CSE", "ECE", "CSE", "ECE"],
+    "marks": [75, 60, 70, 100, 85, 55]
+}
+df = pd.DataFrame(data)
+print(df.groupby("department")["marks"].mean())
 
 # Find how many students are in each department.
-# data = {
-#     "name": ["raju", "manglu", "bheem", "kumar", "yasir", "abdul"],
-#     "department": ["CSE", "ECE", "CSE", "ECE", "CSE", "ECE"],
-#     "marks": [75, 60, 70, 100, 85, 55]
-# }
+data = {
+    "name": ["raju", "manglu", "bheem", "kumar", "yasir", "abdul"],
+    "department": ["CSE", "ECE", "CSE", "ECE", "CSE", "ECE"],
+    "marks": [75, 60, 70, 100, 85, 55]
+}
 
-# df = pd.DataFrame(data)
-# print(df["department"].value_counts())
+df = pd.DataFrame(data)
+print(df["department"].value_counts())
 
 # # Remove the duplicate rows and display the DataFrame containing only unique records.
-# data = {
-#     "name": ["raju", "manglu", "raju", "kumar", "manglu"],
-#     "marks": [75, 60, 75, 100, 60]
-# }
-# df = pd.DataFrame(data)
-# print(df.drop_duplicates())
+data = {
+    "name": ["raju", "manglu", "raju", "kumar", "manglu"],
+    "marks": [75, 60, 75, 100, 60]
+}
+df = pd.DataFrame(data)
+print(df.drop_duplicates())
 
 # # Display students who:
 # Have marks >= 60
