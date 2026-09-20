@@ -27,13 +27,13 @@ group=(df.groupby("Type1"))
 print(group['Weight'].mean())
 
 # # Find how many Pokémon belong to each Type1
-# df=pd.read_csv("sample.csv")
-# print(df["Type1"].value_counts())
+df=pd.read_csv("sample.csv")
+print(df["Type1"].value_counts())
 
 #output predection
-# import pandas as pd
-# s = pd.Series([10, 20, 30, 40])
-# print(s)
+import pandas as pd
+s = pd.Series([10, 20, 30, 40])
+print(s)
 
 # import pandas as pd
 # s = pd.Series([100, 200, 300], index=["A", "B", "C"])
