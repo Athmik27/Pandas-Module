@@ -308,23 +308,23 @@ s = pd.Series([100, 200, 300], index=["A", "B", "C"])
 # print(df[(df["Age"] > 20) & (df["Marks"] > 80)])
 
 # # same as above but with or condition
-# data={
-#         'name':["MARK","JACK","HENRY","NATALIE"],
-#         'age':[21,22,20,19],
-#         'marks':[80,75,90,85],
-# }
-# df=pd.DataFrame(data)
-# print(df[(df['age']<20)| (df["marks"]>80)])
+ data={
+         'name':["MARK","JACK","HENRY","NATALIE"],
+        'age':[21,22,20,19],
+        'marks':[80,75,90,85],
+}
+df=pd.DataFrame(data)
+ print(df[(df['age']<20)| (df["marks"]>80)])
 
 # ### imp place question
-# data = {
-#     "Name": ["Rahul", "Anu", "Kiran", "Sneha", "Arjun"],
-#     "Age": [21, 20, 22, 19, 23],
-#     "Marks": [78, 92, 65, 88, 95]
-# }
-# df = pd.DataFrame(data)
-# df["Result"] = df["Marks"] >= 40
-# print(df)
+ data = {
+     "Name": ["Rahul", "Anu", "Kiran", "Sneha", "Arjun"],
+     "Age": [21, 20, 22, 19, 23],
+    "Marks": [78, 92, 65, 88, 95]
+ }
+ df = pd.DataFrame(data)
+df["Result"] = df["Marks"] >= 40
+print(df)
 
 # write code to sort the students by Marks from highest to lowest
 data={
