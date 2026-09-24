@@ -63,8 +63,8 @@ print(s.values) # s.index    # gives labels
 # Create a Pandas Series containing:
 # 10, 20, 30, 40, 50
 # Then print the Series.
-# s=pd.Series([10,20,30,40,50])
-# print(s)
+s=pd.Series([10,20,30,40,50])
+print(s)
 
 # Create a Pandas Series with these values:
 
@@ -75,8 +75,8 @@ print(s.values) # s.index    # gives labels
 # "A", "B", "C"
 
 # Then print the Series
-# s=pd.Series([100,200,300],index=["A","B","C"])
-# print(s)
+s=pd.Series([100,200,300],index=["A","B","C"])
+print(s)
 
 # Create this Series:
 
@@ -85,16 +85,16 @@ print(s.values) # s.index    # gives labels
 # C    300
 
 # Then print only the value 200 using its index label.
-# s=pd.Series([100,200,300],index=["A","B","C"])
-# print(s.loc["B"])
+s=pd.Series([100,200,300],index=["A","B","C"])
+print(s.loc["B"])
 
 # Given:
 
 # s = pd.Series([100, 200, 300], index=["A", "B", "C"])
 
 # # Write code to print 300 using iloc.
-# s=pd.Series([100,200,300],index=["A","B","C"])
-# print(s.iloc[2])
+s=pd.Series([100,200,300],index=["A","B","C"])
+print(s.iloc[2])
 
 # Create this Series:
 
@@ -104,8 +104,8 @@ print(s.values) # s.index    # gives labels
 # D    40
 
 # Then write code to print only 20 and 30 using iloc.
-# s=pd.Series([10,20,30,40],index=["A","B","C","D"])
-# print(s.iloc[1:3])
+s=pd.Series([10,20,30,40],index=["A","B","C","D"])
+print(s.iloc[1:3])
 
 # Create this Series:
 
@@ -117,104 +117,104 @@ print(s.values) # s.index    # gives labels
 # Then write code to change the value at index "B" from 20 to 50.
 
 # Use .loc[].
-# s=pd.Series([10,20,30,40],index=["A","B","C","D"])
-# s.loc["B"]=50
-# print(s)
+s=pd.Series([10,20,30,40],index=["A","B","C","D"])
+s.loc["B"]=50
+print(s)
 
-# s = pd.Series([10, 20, 30, 40], index=["A", "B", "C", "D"])
+s = pd.Series([10, 20, 30, 40], index=["A", "B", "C", "D"])
 
 # Change the value at position 2 to 100 using .iloc.
 
-# s = pd.Series([10, 20, 30, 40], index=["A", "B", "C", "D"])
-# s.iloc[2]=100
-# print(s)
+s = pd.Series([10, 20, 30, 40], index=["A", "B", "C", "D"])
+s.iloc[2]=100
+print(s)
 
 # Given:
 
 # s = pd.Series([10, 25, 30, 15, 40])
 
 # Write code to print only values greater than 20.
-# s = pd.Series([10, 25, 30, 15, 40])
-# print(s[s > 20])
+s = pd.Series([10, 25, 30, 15, 40])
+print(s[s > 20])
 
 # Given:
 
 # s = pd.Series([10, 25, 30, 15, 40])
 
 # Write code to print only values less than 30.
-# s = pd.Series([10, 25, 30, 15, 40])
-# print(s[s<30])
+s = pd.Series([10, 25, 30, 15, 40])
+print(s[s<30])
 
 # Given:
 
 # s = pd.Series([10, 20, 30, 40, 50])
 
 # Print values that are greater than 20 AND less than 50.
-# s = pd.Series([10, 25, 30, 15, 40])
-# print(s[(s>20) & (s<50)])
+s = pd.Series([10, 25, 30, 15, 40])
+print(s[(s>20) & (s<50)])
 
 # Using:
 
 # s = pd.Series([10, 25, 30, 15, 40])
 
 # Print values that are less than 15 OR greater than 35
-# s = pd.Series([10, 25, 30, 15, 40])
-# print(s[(s<15)| (s>35)])
+s = pd.Series([10, 25, 30, 15, 40])
+print(s[(s<15)| (s>35)])
 
 # Given:
 
 # s = pd.Series([10, 20, 30, 40, 50])
 
 # Write code to find the total of all values.
-# s = pd.Series([10, 20, 30, 40, 50])
-# print(s.sum()) # we can use mean,max,min,...To sort from large → small, we use s.sort_values(ascending=False)
+s = pd.Series([10, 20, 30, 40, 50])
+print(s.sum()) # we can use mean,max,min,...To sort from large → small, we use s.sort_values(ascending=False)
 
 # # imp
-# s = pd.Series([10, 20, 10, 30, 20, 10])
-# print(s.value_counts())
+s = pd.Series([10, 20, 10, 30, 20, 10])
+print(s.value_counts())
 
 # import pandas as pd
-# s = pd.Series([10, 20, None, 40])
-# print(s.isna()) # checks the Not Avail(NaN) values 
+s = pd.Series([10, 20, None, 40])
+print(s.isna()) # checks the Not Avail(NaN) values 
 
-# s = pd.Series([10, None, 30, None, 50])
-# print(s.fillna(0)) # fillna() is used to replace missing (NaN) values with another value.
+s = pd.Series([10, None, 30, None, 50])
+print(s.fillna(0)) # fillna() is used to replace missing (NaN) values with another value.
 
-# s = pd.Series([10, None, 30, None, 50])
-# print(s.dropna()) # dropna() is used to remove missing (NaN) values from a Series.
+s = pd.Series([10, None, 30, None, 50])
+print(s.dropna()) # dropna() is used to remove missing (NaN) values from a Series.
 
-# s = pd.Series([10, 20, None, 40, None])
-# print(s.count()) # count() tells you the number of non-missing values in a Series.
+s = pd.Series([10, 20, None, 40, None])
+print(s.count()) # count() tells you the number of non-missing values in a Series.
 
-# s = pd.Series([10, 20, 10, 30, 20, 40])
-# print(s.unique()) 
+s = pd.Series([10, 20, 10, 30, 20, 40])
+print(s.unique()) 
 
-# s = pd.Series([10, 20, 10, 30, 20, 40])
-# print(s.nunique())
+s = pd.Series([10, 20, 10, 30, 20, 40])
+print(s.nunique())
 
 
-# s = pd.Series([10, 20, 30, 40], index=["A", "B", "C", "D"])
-# s.iloc[2]=100
-# print(s)
+s = pd.Series([10, 20, 30, 40], index=["A", "B", "C", "D"])
+s.iloc[2]=100
+print(s)
 
 ###
-# data={
-#     'name':["Mark","Jack","Henry"],
-#     'age':[19,20,20],
-#     'marks':[80,85,70],
+data={
+    'name':["Mark","Jack","Henry"],
+    'age':[19,20,20],
+    'marks':[80,85,70],
     
-# }
-# df=pd.DataFrame(data)
-# print(df)
+}
+df=pd.DataFrame(data)
+print(df)
 
-###
-# data={
-#     'name':["Mark","Jack","Henry"],
-#     'age':[19,20,20],
-#     'marks':[80,85,70],
-# }
-# df=pd.DataFrame(data)
-# print(df["name"])
+##
+data={
+    'name':["Mark","Jack","Henry"],
+    'age':[19,20,20],
+    'marks':[80,85,70],
+}
+df=pd.DataFrame(data)
+print(df["name"])
 
 # remember
 # df["Name"]       # Select a column
@@ -222,90 +222,90 @@ print(s.values) # s.index    # gives labels
 # df.loc[0, "Name"] # Select a specific value
 
 ###
-# data={
-#     'name':["Mark","Jack","Henry"],
-#     'age':[19,20,20],
-#     'marks':[80,85,70],
-# }
-# df=pd.DataFrame(data)
-# print(df[["name","marks"]])
+data={
+    'name':["Mark","Jack","Henry"],
+    'age':[19,20,20],
+    'marks':[80,85,70],
+}
+df=pd.DataFrame(data)
+print(df[["name","marks"]])
 
 # ###
-# data={
-#     'name':["Mark","Jack","Henry"],
-#     'age':[19,20,20],
-#     'marks_python':[80,85,70],
-# }
-# df=pd.DataFrame(data)
-# print(df[df["name"] == "Jack"])
+data={
+    'name':["Mark","Jack","Henry"],
+    'age':[19,20,20],
+    'marks_python':[80,85,70],
+}
+df=pd.DataFrame(data)
+print(df[df["name"] == "Jack"])
 
-###
-# data={
-#     'name':["Mark","Jack","Henry"],
-#     'age':[19,20,20],
-#     'marks_python':[80,85,70],
-# }
-# df=pd.DataFrame(data,index=["student1",'student2','student3'])
-# print(df.loc["student2"])
-# # note:
-# df.loc[row_label, column_label]
-# df.loc[row_label, [column1, column2]]
+##
+data={
+    'name':["Mark","Jack","Henry"],
+    'age':[19,20,20],
+    'marks_python':[80,85,70],
+}
+df=pd.DataFrame(data,index=["student1",'student2','student3'])
+print(df.loc["student2"])
+# note:
+df.loc[row_label, column_label]
+df.loc[row_label, [column1, column2]]
 
 ###
 # Using the same DataFrame, select student1 and student3, but display only the name column.
-# data={
-#     'name':["Mark","Jack","Henry"],
-#     'age':[19,20,20],
-#     'marks_python':[80,85,70],
-# }
-# df=pd.DataFrame(data,index=["student1",'student2','student3'])
-# print(df.loc[["student1", "student3"], "name"])
+data={
+    'name':["Mark","Jack","Henry"],
+    'age':[19,20,20],
+    'marks_python':[80,85,70],
+}
+df=pd.DataFrame(data,index=["student1",'student2','student3'])
+print(df.loc[["student1", "student3"], "name"])
 
-# # Using the same DataFrame, select:
+# Using the same DataFrame, select:
 # # student1 and student3
-# # name and marks_python
-# data={
-#     'name':["Mark","Jack","Henry"],
-#     'age':[19,20,20],
-#     'marks_python':[80,85,70],
-# }
-# df=pd.DataFrame(data,index=["student1",'student2','student3'])
-# print(df.loc[["student1", "student3"], ["name", "marks_python"]])
+# name and marks_python
+data={
+    'name':["Mark","Jack","Henry"],
+    'age':[19,20,20],
+    'marks_python':[80,85,70],
+}
+df=pd.DataFrame(data,index=["student1",'student2','student3'])
+print(df.loc[["student1", "student3"], ["name", "marks_python"]])
 
 # ###
-# data={
-#     'name':["Mark","Jack","Henry"],
-#     'age':[19,20,20],
-#     'marks_python':[80,85,70],
-# }
-# df=pd.DataFrame(data,index=["student1",'student2','student3'])
-# print(df.iloc[[0, 2], [0, 2]])
-# #note:
-# df.iloc[0]          # row 0
-# df.iloc[:, 0]       # column 0
-# df.iloc[[0, 2]]     # rows 0 and 2
-# df.iloc[[0, 2], [0, 2]]  # rows 0,2 and columns 0,2
+data={
+    'name':["Mark","Jack","Henry"],
+    'age':[19,20,20],
+    'marks_python':[80,85,70],
+}
+df=pd.DataFrame(data,index=["student1",'student2','student3'])
+print(df.iloc[[0, 2], [0, 2]])
+#note:
+df.iloc[0]          # row 0
+df.iloc[:, 0]       # column 0
+df.iloc[[0, 2]]     # rows 0 and 2
+df.iloc[[0, 2], [0, 2]]  # rows 0,2 and columns 0,2
 
 
 # display n print student who scored more than 80
-# import pandas as pd
-# data = {
-#     "Name": ["Rahul", "Anu", "Kiran", "Sneha", "Arjun"],
-#     "Age": [21, 20, 22, 19, 23],
-#     "Marks": [78, 92, 65, 88, 95]
-# }
-# df = pd.DataFrame(data)
-# print(df["Marks"]>80)# this gives me Boolean values.
-# print(df[df['Marks']>80]) # this gives the actual result.
+import pandas as pd
+data = {
+    "Name": ["Rahul", "Anu", "Kiran", "Sneha", "Arjun"],
+    "Age": [21, 20, 22, 19, 23],
+    "Marks": [78, 92, 65, 88, 95]
+}
+df = pd.DataFrame(data)
+print(df["Marks"]>80)# this gives me Boolean values.
+print(df[df['Marks']>80]) # this gives the actual result.
 
 # Find and display students whose Age is greater than 20 AND Marks are greater than 80.
-# data={
-#     'name':["MARK","JACK","HENRY","NATALIE"],
-#     'age':[21,22,20,19],
-#     'marks':[80,75,90,85],
-# }
-# df=pd.DataFrame(data)
-# print(df[(df["Age"] > 20) & (df["Marks"] > 80)])
+data={
+    'name':["MARK","JACK","HENRY","NATALIE"],
+    'age':[21,22,20,19],
+    'marks':[80,75,90,85],
+}
+df=pd.DataFrame(data)
+print(df[(df["Age"] > 20) & (df["Marks"] > 80)])
 
 # # same as above but with or condition
  data={
