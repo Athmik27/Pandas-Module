@@ -39,25 +39,25 @@ print(s)
 s = pd.Series([100, 200, 300], index=["A", "B", "C"])
 # print(s["B"])
 
-# import pandas as pd
-# s = pd.Series([10, 20, 30, 40])
-# print(s[2])
+import pandas as pd
+s = pd.Series([10, 20, 30, 40])
+print(s[2])
 
-# import pandas as pd
-# s = pd.Series(50, index=["A", "B", "C"])
-# print(s)
+import pandas as pd
+s = pd.Series(50, index=["A", "B", "C"])
+print(s)
 
-# import pandas as pd
-# s = pd.Series([10, 20, 30, 40])
-# print(s[1:3])
+import pandas as pd
+s = pd.Series([10, 20, 30, 40])
+print(s[1:3])
 
-# import pandas as pd
-# s = pd.Series([10, 20, 30], index=["A", "B", "C"])
-# print(s.index)
+import pandas as pd
+s = pd.Series([10, 20, 30], index=["A", "B", "C"])
+print(s.index)
 
-# import pandas as pd
-# s = pd.Series([10, 20, 30], index=["A", "B", "C"])
-# print(s.values) # s.index    # gives labels
+import pandas as pd
+s = pd.Series([10, 20, 30], index=["A", "B", "C"])
+print(s.values) # s.index    # gives labels
 #                s.values   # gives values
 
 # Create a Pandas Series containing:
